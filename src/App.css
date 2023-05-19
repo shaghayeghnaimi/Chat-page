@@ -1,0 +1,136 @@
+.chat-container {
+  background-color: rgb(238, 239, 252);
+  min-height: auto;
+  margin-top: -8px;
+  padding-bottom: 32px;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  background-color: rgb(254, 254, 254);
+  position: fixed;
+}
+
+.profile-picture {
+  margin-top: 10px;
+}
+
+.profile-name {
+  font-size: 16px;
+  margin-bottom: 0px;
+}
+
+.comeback-time {
+  font-size: 12px;
+  color: rgb(81, 81, 81);
+  margin-top: 0px;
+}
+
+
+.chat-window {
+  width: 100%;
+  min-height: 520px;
+  background-color: rgb(238, 239, 252);
+}
+
+img {
+  width: 24px;
+  margin-right: 8px;
+}
+
+.chat-time {
+  display: flex;
+  align-items: center;
+  padding-top: 12%;
+}
+
+.line {
+  flex-grow: 1;
+  height: 0.5px;
+  background-color: rgb(127, 126, 125);
+  margin: 8px;
+}
+
+.time-label {
+  color: rgb(127, 126, 125);
+  font-size: 12px;
+  font-family: Georgia, 'Times New Roman', Times, serif
+}
+
+.question {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 16px;
+  margin-right: 8px;
+
+}
+
+.question-content {
+  background-color: rgb(59, 130, 253);
+  padding: 8px 16px;
+  color: rgb(255, 255, 255);
+  font-size: 14px;
+  border-top-right-radius: 8px;
+  border-top-left-radius: 16px;
+  border-bottom-left-radius: 16px;
+  width: fit-content;
+
+}
+
+#sender {
+  margin-top: 16px;
+  max-width: 680PX;
+  margin-left: 8px;
+  display: flex;
+}
+
+.message-content {
+  background-color: rgb(255, 255, 255);
+  padding: 8px 16px;
+
+  font-size: 14px;
+  border-top-right-radius: 16px;
+  border-top-left-radius: 8px;
+  border-bottom-right-radius: 16px;
+  width: fit-content;
+
+
+}
+
+.input-area {
+  background-color: rgb(255, 255, 255);
+  border-radius: 8px;
+  margin: 16px 16px;
+  display: flex;
+  justify-content: space-between;
+  padding-left: 16px;
+  padding-right: -16px;
+
+}
+
+
+
+#fullWidth {
+font-size: 14px;
+  width: 100%;
+}
+
+.css-7obqij-MuiInputBase-root-MuiInput-root:before {
+  border-bottom: 0px solid rgba(233, 35, 35, 0.42) !important;
+}
+
+.css-7obqij-MuiInputBase-root-MuiInput-root:after {
+  border-bottom: 0px solid #ffffff !important;
+  border:1px solid #1976d2 !important;
+}
+
+
+
+
+button {
+  border: 0px;
+  background-color: rgb(255, 255, 255, 0%);
+  display: flex;
+}
