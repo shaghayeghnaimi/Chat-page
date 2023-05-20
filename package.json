@@ -2,7 +2,7 @@
   "name": "my-app",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://shaghayeghnaimi.github.io/Chat-page",
+  "homepage": "https://shaghayeghnaimi.github.io/support-chat",
   "dependencies": {
     "@emotion/react": "^11.10.5",
     "@emotion/styled": "^11.10.5",
