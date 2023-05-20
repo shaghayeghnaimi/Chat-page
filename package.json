@@ -2,7 +2,7 @@
   "name": "my-app",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://shaghayeghnaimi.github.io",
+  "homepage": "https://shaghayeghnaimi.github.io/Chat-page",
   "dependencies": {
     "@emotion/react": "^11.10.5",
     "@emotion/styled": "^11.10.5",
@@ -55,6 +55,8 @@
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/shaghayeghnaimi/Chat-page/issues"
+  },
+  "devDependencies": {
+    "gh-pages": "^5.0.0"
   }
-
 }

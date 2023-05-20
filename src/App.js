@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import "./App.css";
 import Input from "@mui/material/Input";
 import IconButton from "@mui/material/IconButton";
@@ -8,6 +8,20 @@ import SentimentSatisfiedAltIcon from "@mui/icons-material/SentimentSatisfiedAlt
 const ChatPage = () => {
   const [messages, setMessages] = useState([]);
   const [newMessage, setNewMessage] = useState("");
+
+
+  const messagesEndRef = useRef(null)
+
+  const scrollToBottom = () => {
+    messagesEndRef.current?.scrollIntoView({ behavior: "smooth" })
+  }
+
+  useEffect(() => {
+    scrollToBottom()
+  }, [messages]);
+ 
+
+
 
   const handleInputChange = (event) => {
     setNewMessage(event.target.value);
@@ -44,8 +58,9 @@ const ChatPage = () => {
     return messageDate.toDateString();
   };
 
+
   return (
-    <div className="chat-container">
+    <div className="chat-container" >
       <div className="header">
         <div className="profile-picture">
           <img src="logo512.png" alt="Recipient Profile" />
@@ -55,7 +70,7 @@ const ChatPage = () => {
           <p className="comeback-time">we will back online at 09:00 am</p>
         </div>
       </div>
-      <div className="chat-window">
+      <div className="chat-window"  >
         <div className="chat-time">
           {messages.length > 0 && <div className="line"></div>}
           {messages.length > 0 && (
@@ -74,7 +89,7 @@ const ChatPage = () => {
         </div>
 
         {messages.map((message, index) => (
-          <div key={index} className={`message ${message.sender}`} id="sender">
+          <div ref={messagesEndRef} key={index} className={`message ${message.sender}`} id="sender">
             {message.sender === "user" && (
               <div className="sender-profile-picture">
                 <img src="logo512.png" alt="Recipient Profile" />
@@ -94,10 +109,11 @@ const ChatPage = () => {
           onChange={handleInputChange}
           placeholder="Write answer ..."
         />
+
+        <IconButton aria-label="Icons" size="small">
+          <SentimentSatisfiedAltIcon />
+        </IconButton>
         <button onClick={handleSendMessage}>
-          <IconButton aria-label="Icons" size="small">
-            <SentimentSatisfiedAltIcon />
-          </IconButton>
           <IconButton aria-label="Send" size="small">
             <SendOutlinedIcon />
           </IconButton>
